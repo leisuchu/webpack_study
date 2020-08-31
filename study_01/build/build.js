@@ -86,14 +86,26 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/data.json":
+/*!***********************!*\
+  !*** ./src/data.json ***!
+  \***********************/
+/*! exports provided: name, age, pos, default */
+/***/ (function(module) {
+
+eval("module.exports = JSON.parse(\"{\\\"name\\\":\\\"leisuchu\\\",\\\"age\\\":24,\\\"pos\\\":1}\");\n\n//# sourceURL=webpack:///./src/data.json?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("/**\n * webpack 入口\n */\n\n function add(x,y){\n     return new Promise( (resolve,reject) => {\n        setTimeout(() => {\n            resolve(x+y)\n        }, 1000);\n     } );\n }\n\n async function test(){\n     var res = await add( 3,4);\n     console.log(res);\n     \n }\n\n test();\n\n\n \n\n//# sourceURL=webpack:///./src/index.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _data_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./data.json */ \"./src/data.json\");\nvar _data_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./data.json */ \"./src/data.json\", 1);\n/**\n * webpack 入口\n */\n\n \n\n function add(x,y){\n     return new Promise( (resolve,reject) => {\n        setTimeout(() => {\n            resolve(x+y)\n        }, 1000);\n     } );\n }\n\n async function test(){\n     console.log('data: ',_data_json__WEBPACK_IMPORTED_MODULE_0__);\n     var res = await add(_data_json__WEBPACK_IMPORTED_MODULE_0__.age,_data_json__WEBPACK_IMPORTED_MODULE_0__.pos);\n     console.log('add: ',res);\n }\n\n test();\n\n\n \n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 

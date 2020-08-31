@@ -2,6 +2,8 @@
  * webpack 入口
  */
 
+ import data from './data.json'
+
  function add(x,y){
      return new Promise( (resolve,reject) => {
         setTimeout(() => {
@@ -11,9 +13,9 @@
  }
 
  async function test(){
-     var res = await add( 3,4);
-     console.log(res);
-     
+     console.log('data: ',data);
+     var res = await add(data.age,data.pos);
+     console.log('add: ',res);
  }
 
  test();
