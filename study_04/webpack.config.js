@@ -16,6 +16,14 @@ module.exports = {
                     'css-loader',
                     'less-loader'
                 ]
+            },
+            // 图片加载需要 url-loader file-loader
+            {
+                test:/\.jpeg/,
+                loader:'url-loader',
+                options:{
+                    limit:8 * 1024
+                }
             }
         ]
     },
