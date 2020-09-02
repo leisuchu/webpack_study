@@ -22,6 +22,7 @@ module.exports = {
                 ]
             },
             // less loader
+            // TODO 要下载less less-loader
             {
                 test:/\.less/,
                 use:[

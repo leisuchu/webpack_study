@@ -18,6 +18,7 @@
   "homepage": "https://github.com/leisuchu/webpack_study#readme",
   "devDependencies": {
     "css-loader": "^4.2.2",
+    "html-webpack-plugin": "^4.4.1",
     "less": "^3.12.2",
     "less-loader": "^7.0.0",
     "style-loader": "^1.2.1",
