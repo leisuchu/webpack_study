@@ -38,6 +38,8 @@ module.exports = {
         // 启动压缩
         compress:true,
         // 端口号
-        port:8081
+        port:8081,
+        // 自动打开浏览器
+        open:true,
     }
 }
