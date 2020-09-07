@@ -32,7 +32,8 @@ module.exports = {
                 options:{
                     limit:8 * 1024,
                     name:'[hash:10].[ext]',
-                    esModule:false
+                    esModule:false,
+                    outputPath:'imgs'
                 }
             },
             // html 中的图片加载
@@ -45,7 +46,8 @@ module.exports = {
                 exclude:/\.(js|html|css|less|png|jpg|jpeg|gif)$/,
                 loader:'file-loader',
                 options:{
-                    name:'[hash:10].[ext]'
+                    name:'[hash:10].[ext]',
+                    outputPath:'source'
                 }
             }
         ]
