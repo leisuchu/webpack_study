@@ -17,15 +17,11 @@ module.exports = {
                 test:/\.css$/,
                 use:[
                     MiniCssExtractPlugin.loader,// 替代style-loader,提取css到单独文件
-                    // 'style-loader',
                     'css-loader',
                     {
                         loader:'postcss-loader',
                         options:{
                             ident:'postcss',
-                            // plugins:() => [
-
-                            // ]
                             plugins:() => [
                                 // 需要package.json中配置browerlist
                                 require('postcss-preset-env')()
