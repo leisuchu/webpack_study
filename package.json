@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"npx webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -51,9 +52,6 @@
       "not dead",
       "not op_mini all"
     ]
-  },
-  "eslintConfig": {
-    "extends": "airbnb-base"
   },
   "dependencies": {
     "eslint-loader": "^4.0.2"
