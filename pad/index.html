@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="show_content"></div>
+</body>
+<script>
+    var showContent = document.getElementById('show_content')
+    var log = (...rest) => {
+        showContent.innerHTML = showContent.innerHTML + `<div>${rest.join('')}</div>`
+    }
+    var add1 = function(){
+        return new Promise( (resolve,reject) => {
+            setTimeout(() => {
+                log('add1')
+                resolve()
+            }, 1000);
+        } )
+    }
+    var add2 = function(){
+        return new Promise( (resolve,reject) => {
+            setTimeout(() => {
+                console.log('add2');
+                log('add2')
+                resolve()
+            }, 3000);
+        } )
+    }
+    var test = async function(){
+        await add1();
+        log('add1 完成')
+        await add2();
+        log('add2 完成')
+        log('兼容性测试')
+    }
+
+    test();
+
+</script>
+</html>

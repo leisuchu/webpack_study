@@ -2,9 +2,12 @@ const {resolve} = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 module.exports = {
-    entry:'./src/index.js',
+    entry:{
+        main:'./src/index.js',
+        core:'./src/libs/core.js'
+    },
     output:{
-        filename:'js/bundle.js',
+        filename:'js/[name][contenthash:10].js',
         path:resolve(__dirname,'build')
     },
     module:{
@@ -56,7 +59,7 @@ module.exports = {
     plugins:[
         // css 单独抽出
         new MiniCssExtractPlugin({
-            filename: 'css/build.css'
+            filename: 'css/build[contenthash:10].css'
         }),
         new HtmlWebpackPlugin({
             template:'./src/index.html'

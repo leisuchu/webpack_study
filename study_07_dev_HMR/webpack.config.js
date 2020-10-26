@@ -77,5 +77,6 @@ module.exports = {
         // 开启HMR功能（hot module replacement）
         // 新配置想生效需要重启启动
         hot:true, // 热加载
-    }
+    },
+   
 }

@@ -27,16 +27,8 @@ const commonCssLoader = [
 ]
 
 /**
- *  缓存处理
- *      babel缓存，在babel options中添加 cacheDirectory:5
- *      --》 第二次打包速度更快
- *      文件资源缓存：
- *          hash:每次构建生产唯一的hash值
- *               问题：如果重新重建，缓存失效
- *          chunkhash(代码块，所有依赖通过入口文件index.js引入):根据chunk生成hash值，如果打包来自同一个，重新打包一样会缓存失效
- *          contenthash:根据文件内容生成hash值，不同的文件一定不一样
- *      --》上线代码的缓存优化
- * 
+ *  摇树（tree shaking）-> 删除无用代码
+ *  前提：1 必须使用es6模块化编程 2 开启production环境
  */
 
 
