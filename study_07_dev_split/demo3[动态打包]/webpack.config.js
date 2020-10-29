@@ -2,12 +2,9 @@ const {resolve} = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 module.exports = {
-    entry:{
-        main:'./src/index.js',
-        core:'./src/libs/core.js'
-    },
+    entry:'./src/index.js',
     output:{
-        filename:'js/bundle_[name].js',
+        filename:'js/bundle.js',
         path:resolve(__dirname,'build')
     },
     module:{
@@ -72,6 +69,7 @@ module.exports = {
         port:8082,
         open:true,
         hot:true, // 热加载
+        inline:true
     },
     /**
      * eval cheap nosource module inline hidden
@@ -79,7 +77,7 @@ module.exports = {
      * 生产环境：source-map 
      *  如果要隐藏代码 nosource-source-map(隐藏全部) hidden-source-map(隐藏原代码)
      */
-    devtool:'eval-source-map',// 错误代码详细信息及错误源代码位置
+    devtool:'source-map',// 错误代码详细信息及错误源代码位置
     
     /**
      * optimization 可以将modules单独打包成一个chunk输出

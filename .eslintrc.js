@@ -8,7 +8,17 @@ module.exports = {
         'airbnb-base'
     ],
     rules:{
-        'no-console':0
+        'no-console':0,
+        'global-require':0
+    },
+    // 过滤浏览器和node的变量
+    env:{
+        browser:true,
+        node:true
+    },
+    // 过滤指定的全局变量
+    globals:{
+        lei:true
     }
 }
 

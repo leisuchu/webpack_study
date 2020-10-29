@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["vendors~main"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["vendors~core~main"],{
 
 /***/ "../../node_modules/jquery/dist/jquery.js":
 /*!***********************************************************************************************!*\
