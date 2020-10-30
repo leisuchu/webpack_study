@@ -21,7 +21,3 @@ module.exports = {
         lei:true
     }
 }
-
-// "eslintConfig": {
-//     "extends": "airbnb-base"
-//   },

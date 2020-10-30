@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[0],{3:function(n,o,c){"use strict";function s(){console.log("----懒加载测试")}c.r(o),c.d(o,"lazytest",(function(){return s})),console.log("lazy loading")}}]);

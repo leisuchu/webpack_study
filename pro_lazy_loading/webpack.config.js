@@ -40,7 +40,7 @@ module.exports = {
     entry: './src/index.js',
     // 输出配置
     output: {
-        filename: 'js/bundle[contenthash:10].js',
+        filename: 'js/[name][contenthash:10].js',
         path: resolve(__dirname, 'build')
     },
     // loaders 配置
